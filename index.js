@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 
 require('dotenv').config();
-const getWeather = require('./openWeatherMap')
+
+const getWeather = require('./openWeatherMap');
 
 app.get('/', async(req, res) => {
     
