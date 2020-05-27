@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
 
-const weather = require('./openWeatherMap')
+const getWeather = require('./openWeatherMap')
 
-app.get('/', (req, res) => {
-    res.send('Hello, welcome to my website')
-})
+app.get('/', async(req, res) => {
+    
+    let data = await getWeather();
+    res.send(data)
+});
+
 app.get('/page2', (req, res) => {
     res.send('I am the second page')
 })
