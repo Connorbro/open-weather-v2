@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const getWeather = require('./openWeatherMap')
+const weather = require('./openWeatherMap')
 
 app.get('/', (req, res) => {
     res.send('Hello, welcome to my website')
