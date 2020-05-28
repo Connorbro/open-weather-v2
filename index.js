@@ -20,8 +20,8 @@ app.get('/', async(req, res) => {
     let data = await openWeatherMap.getWeather();
     console.log(data)
     let temp = data.main.temp
-    
-    res.render('index', {temp})
+    let cityName = data.name
+    res.render('index', {cityName, temp})
 });
 
 app.listen(3000, ()=> {
