@@ -17,8 +17,9 @@ app.set('view engine', '.hbs');
 
 app.get('/', async(req, res) => {
     
-    let data = await openWeatherMap.getWeather();
-    res.send(data)
+    // let data = await openWeatherMap.getWeather();
+    // res.send(data)
+    res.render('index')
 });
 
 app.listen(3000, ()=> {
